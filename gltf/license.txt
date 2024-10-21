@@ -1,0 +1,11 @@
+Model Information:
+* title:	Destructor Astro Toilet v4
+* source:	https://sketchfab.com/3d-models/destructor-astro-toilet-v4-3385502ea0e243cf907f3aa034499e08
+* author:	Astro scientist (https://sketchfab.com/Astroscientist)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Destructor Astro Toilet v4" (https://sketchfab.com/3d-models/destructor-astro-toilet-v4-3385502ea0e243cf907f3aa034499e08) by Astro scientist (https://sketchfab.com/Astroscientist) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
