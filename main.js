@@ -6,7 +6,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // scene and camera
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(5, 1, 5);
+camera.lookAt(0, 0, 0);
+camera.position.set(4, .8, 4);
 scene.add(camera);
 
 // fog
@@ -30,14 +31,14 @@ window.addEventListener('resize', function () {
 });
 
 // lights
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
 scene.add(ambientLight);
 
-const spotLight = new THREE.SpotLight("gray", 90, 10, Math.PI / 8, .02, 0.5);
+const spotLight = new THREE.SpotLight("white", 90, 10, Math.PI / 8, .01, 0.5);
 spotLight.position.set(0, 6, 5);
 spotLight.castShadow = true;
 
-const directionalLight = new THREE.DirectionalLight("white", 5);
+const directionalLight = new THREE.DirectionalLight("white", 7);
 directionalLight.position.set(0, 3, 5);
 directionalLight.castShadow = true;
 
@@ -45,7 +46,7 @@ const spotLightHelper = new THREE.SpotLightHelper(spotLight);
 const lightHelper = new THREE.DirectionalLightHelper(directionalLight);
 
 scene.add(spotLight, directionalLight);
-scene.add(spotLightHelper, lightHelper);
+// scene.add(spotLightHelper, lightHelper);
 
 const pmremGeneretor = new THREE.PMREMGenerator(renderer);
 pmremGeneretor.compileEquirectangularShader();
@@ -83,7 +84,6 @@ new RGBELoader()
 
             function modelRotate() {
                 requestAnimationFrame(modelRotate);
-                camera.lookAt(0, 0, 0);
                 model.rotation.y += -0.001;
                 renderer.render(scene, camera);
             }
